@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script language="javascript">
+function toggleOverlay(){
+	var overlay = document.getElementById('overlay');
+	var specialBox = document.getElementById('specialBox');
+	overlay.style.opacity = .8;
+	if(overlay.style.display == "block"){
+		overlay.style.display = "none";
+		specialBox.style.display = "none";
+	} else {
+		overlay.style.display = "block";
+		specialBox.style.display = "block";
+	}
+}
+
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+
+</script>
+
+
+  <title>SM</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style> 
+  body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow-x:hidden;
+}
+header {
+ position:fixed;
+  z-index: 2;
+  border-bottom: solid 1px black;
+}
+
+header .row,footer .row {
+  display: flex;
+  align-items: center;
+   background:white;
+   width:113.6%;
+   padding:20px 0;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size:3vw;
+  margin: 0;
+  
+  
+}
+
+.row ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header a {
+  padding: 0 15px;
+ color : brown;
+  margin: 0;
+  text-decoration:none;
+}
+
+header a:hover {
+padding: 0 20px;
+ color : black;
+  margin: 0;
+  text-decoration:none;
+}
+
+/*.home {
+  position: relative;
+  width: 100%;
+}*/
+
+.overlay{
+  /*position: absolute;*/
+  /*bottom: 0;
+  left: 0;
+  right: 0;*/
+  /*background-color: #008CBA;*/
+ /*overflow: hidden;*/
+  /*width:0;
+  height: 100%;
+  transition: .5s ease;*/
+}
+
+/*.home:hover .overlay {
+  width: 100%;
+  z-index : 10;	
+}*/
+
+/*.textoverlay {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}*/
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('a.jpg');
+ /*opacity : 0.8;*/
+  background-attachment : fixed;
+ background-size: cover;
+  color: brown;
+ height: 600px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+  }
+
+.jumbotron h1 {
+	color : brown;
+}
+
+#hey {
+	text-decoration : line-through;	
+}
+
+.jumbotron h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px #466995;
+}
+
+.jumbotron span {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px #466995;
+  
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: brown;
+  font-weight : bold;
+  /*text-shadow: 0 2px #466995;*/
+   border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  padding-top : 30px;
+  padding-bottom : 30px;
+  border-width : 2px;
+  border-color : white;
+}
+
+div.transbox {
+    margin: 1px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	
+}
+
+div.transbox h3 {
+    margin: 0.1%;
+    /*font-weight: bold;*/
+    color: #000000;
+    
+}
+
+.jumbotron h4 {
+	color : white;
+	font-weight : 800;
+}
+
+/*.img1 {
+	opacity : 0.7;
+}*/
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fbd1d5;
+  text-shadow: none;
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(#FFD194, #BC1324);
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #fbd1d5;
+}
+
+.btn-secondary {
+  background-color: #E8DFE0;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+
+.placeofbirth, .address, .phone, .email, .edu, .skills p {
+font-weight : bold;
+font-size : 15px;
+}
+
+#asc{
+font-weight  : bold;
+font-size : 15px;
+}
+
+.img21 {
+	clip : rect (0px,0px,0px,0px);
+}
+
+.education {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.education p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.education p:hover{background-color: #73AD21;
+		color : white;
+ }
+
+.achievements {
+	border-left: 6px solid #FFD700;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.achievements p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.achievements p:hover{background-color:#FFD700}
+
+/*.achievements p:nth-child(even){background-color: #f2f2f2}*/
+
+/*.skill {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.skill p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.skill p:hover{background-color:  #e7e70a; }*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    font-size : 20px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.interests {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.interests p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.interests p:hover{background-color: #FF69B4; }
+
+.activities {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.activities p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.activities p:hover{background-color:#C0C0C0; }
+
+
+.text {
+	position: absolute;
+	top: 130px;
+	left : 50px;
+	 font-family: 'Roboto', sans-serif;
+	font-size:60px;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	/*font-style: bold;*/
+	color: black;
+	background-color:rgba(255,255,255,0.9);
+	width: 480px;
+	height:200px;
+	line-height:100px;
+	text-align: center;
+	z-index:10;
+	opacity: 0;
+	 -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    
+.text:hover {
+	opacity:1;
+	}
+	
+.textmail {
+	position: absolute;
+	top: 415px;
+	left : 15px;
+	 font-family: 'Roboto', sans-serif;
+	font-size:45px;
+	font-style: bold;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	color: white;	width: 560px;
+	height:250px;
+	line-height:250px;
+	text-align: center;
+	z-index:10;
+	opacity: 0;
+	 -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease;
+    transition: all 0.8s ease-in-out;
+    }
+#father{
+	position:absolute;
+	top:410px;
+	left:15px;
+	overflow: hidden; 
+	height:260px;
+	width: 130px;
+}
+#father1{
+	position:absolute;
+	top:410px;
+	left:145px;
+	overflow: hidden; 
+	height:260px;
+	width: 430px;
+}
+.bg-left{
+	background-color:red;	
+	z-index:8;
+	opacity: 0.6;
+	margin-left:-300px;
+	transition: all 0.5s ease-out;
+	width: 100%;
+	height: 100%;
+}
+
+.bg-right{
+	background-color:black;	
+	z-index:8;
+	opacity: 0.6;
+	margin-left:500px;
+	transition: all 0.5s ease-out;
+	width: 100%;
+	height: 100%;
+}
+    
+.textmail:hover {
+	opacity:1;
+	}
+#nytimes:hover .bg-left{
+	margin-left:0%;
+	}
+
+#nytimes:hover .bg-right{
+	margin-left:0%;
+	}
+	
+#overlay {
+    position: fixed;
+    display: none;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+footer {
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
+  </style>
+</head>
+<body>
+
+<header class="container">
+   <div class="row">
+      <a href = "sm.html"><!--<i class="glyphicon glyphicon-cloud" style="font-size : 40px;">Sylvia</i>--><h1 class="col-sm-4" role="button">  SYLVIA 	 </h1> </a>
+     <nav class="col-sm-12 text-right">
+     <ul>
+    <!--<li>--><a class = "topbuttons" role="button" href="sm.html#personal">Personal Data</a></li>
+    <a class = "topbuttons" role="button" href="sm.html#education">Education</a></li>
+    <a class = "topbuttons" role="button" href="sm.html#achievements">Achievements</a></li>
+    <a class = "topbuttons" role="button" href="sm.html#skills">Skills</a></li>
+    <a class = "topbuttons" role="button" href="sm.html#interests">Interests</a></li>
+    <a  class = "topbuttons" role="button" href="sm.html#activities">Activities</a></li>
+    <a class = "topbuttons" role="button" href="sm.html#contact">Contact</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="jumbotron">
+<div class="container">
+   <div class="row text-center">	
+<div class="home">
+ <!-- <img src="img_avatar.png" alt="home" class="image">-->
+  <div class="overlay">
+    <div class="textoverlay"></br></br></br>
+    <span><h2 id ="hey">Hey People! It's </h2></span><span>Sylvia <b>MITTAL</b></span><span><h2 id="hey"> here .</h2></span>
+    <h4> Second year B.Tech Undergraduate </h4>
+     <a class="btn btn-primary" href="http://www.iitmandi.ac.in/" role="button">IIT Mandi</a></br></br>
+     <div class= "transbox"> <h3>Developer and designer, I'm interested in learning new technologies and experimenting in the world around. With a never ending zeal
+to learn, I take inspiration from my surroundings and try to fit my own solutions.</h3></div>
+<h2>Wanna know more about me ? </h2></br>
+    <a class="btn btn-primary" href="sm.pdf" download role="button">RESUME</a>
+	
+     </div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+   <div class="row">
+     <figure class="col-sm-6"></br></br></br></br>
+    <p>Programming  -   CODE-BLOODED</p>
+    <div class="img1"><img src="1.jpg"></div>
+    </figure>
+    <figure class="col-sm-6"></br></br></br></br>
+      <p>Sports and Fitness</p>
+      <img src="2.jpg">
+      <img src="2b.jpg">
+    </figure>
+  </div>
+  <div class="row"> 
+     <figure class="col-sm-6">
+       <p>Fashion  :  I am FUNKY </p>
+       <img src="3a.jpg">
+       <img src="3b.jpg">
+    </figure>
+    <figure class="col-sm-6">
+      <p>Music : Where words Fail Music SPEAKS</p>
+      <img src="4c.jpg">
+      <img src="4a.jpg">
+    </figure>
+  </div>
+  <div class="row">
+     <figure class="col-sm-6">
+    <p>Travelling : To Travel is to Live </p>
+	<img src="5c.jpg">
+	<img src="5.jpg">
+	<img src="5d.jpg">
+    </figure>
+    <figure class="col-sm-6">
+      <p>Love and Friendship</p>
+      <img src="6a.jpg">
+	<img src="6b.jpg">
+	<img src="6c.jpg">
+    </figure>
+  </div>
+   <div class="row">
+     <figure class="col-sm-6">
+    <p>Food is what you eat :  HEALTHY THINKS BETTER</p>
+	<img src="7a.jpg">
+	<img src="7b.jpg">
+    </figure>
+    <figure class="col-sm-6">
+      <p>Painting</p>
+     <img src="8a.jpg">
+	<img src="8b.jpg">
+    </figure>
+  </div>
+   <div class="row">
+     <figure class="col-sm-6">
+    <p>Girl Power  :  YOU GO GIRL</p>
+	<img src="9b.jpg">
+	<img src="9c.jpg"></br></br></br></br>
+    </figure>
+	
+    <figure class="col-sm-6">
+      <p>Patriotism  :  VIRTUE OF THE VICIOUS</p>
+      <img src="10a.jpg">
+	<div class="img21"><img src="10b.jpg"></div></br></br></br></br>
+    </figure>
+  </div>
+  
+  <div id = 'personal'>
+  <div class="row">
+    <figure class="col-sm-6">
+      <p>Personal Data</p>
+      </br></br></br></br></br>
+      <img src="11b.png"></br></br>
+      <div class="placeofbirth"><p>Place and Date of Birth: Kurukshetra, Haryana,India | 23 December 1997</p></div></br></br>
+<div class="address"><p>Address: H.No. 657 Ward no. 8 , Indira Colony, Railway Road, Kurukshetra, Haryana, India </p></div></br></br>
+<div class="phone"><p> Phone: +91 7807105329 </p></div></br></br></br>
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br>
+    </br></br></br></br></br></br>
+ <img src="11a.png">
+<div class="email"><p> email: <a href="b16038@students.iitmandi.ac.in" target="_blank">b16038@students.iitmandi.ac.in</a></p></div>
+<div class="email"><p> gmail: <a href="b16038@students.iitmandi.ac.in" target="_blank">mittalsylvia23@gmail.com</a></p></div></br></br></br></br>
+</figure>
+   </div>
+   </div>
+   
+   </br></br></br></br>
+   
+   <div id = 'education'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p>Education</p>
+      </br></br></br></br>
+      <img src="12b.png">
+      <img src="12c.jpg">
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br></br>
+    <div class = "edu">
+    <div class = "education">
+    </br></br></br></br>
+    <img src="12a.jpg">
+ <p>Present : Bachelor’s Degree Computer Science and Engineering <br> Indian Institute of Technology, Mandi</p></br></br>
+<p>March 2016 : Senior Secondary School at Annes School, Kharar, Punjab with <br> 98% in PCM </p></br></br>
+<p>March 2014 : High School at Aggarsain Public School, Kurukshetra, Haryana <br> CGPA: 10 </p></br></br>
+</div></div>
+</figure>
+   </div>
+   </div>
+   
+   <div id = 'achievements'>
+ <div class="achieve">  
+   <div class="row">
+    <figure class="col-sm-6">
+      <p id="asc">Achievements, Scholarships, Certificates</p>
+      </br></br></br></br>
+      <img src="13a.jpg">
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br></br></br></br>
+    <div class = "edu">
+    <div class = "achievements">
+    
+ <p style="margin-left : 100px;">May 2016 : JEE Advanced AIR : 2123</p></br></br>
+<p style="margin-left : 100px;"> March 2016 : JEE Mains AIR : 707</p></br></br>
+<p style="margin-left : 100px;"> March 2016 : BITSAT Score : 402/450</p></br></br>
+<p style="margin-left : 100px;"> 2014 : Kishor Vaigyanik Protsahan Yojana(KVPY) Scholar</p></br></br>
+<p style="margin-left : 100px;"> 2014 : Regional Mathematics Olympiad (RMO) Qualified </p></br></br>
+<p style="margin-left : 100px;"> 2014 : National Talent Search Exam (NTSE) Scholar </p></br></br>
+<p style="margin-left : 100px;"> 2013 : Second position in CBSE Basketball Cluster Tournament</p></br></br>
+</div>
+</div>
+</figure>
+   </div>
+  </div>
+  </div>
+  
+  </br></br></br></br>
+
+  <div id = 'skills'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p >Skills</p>
+      <div class = "skills">
+      </br></br>
+      <img src="14d.png">
+      <div class="skill">
+      </br>
+      <div style="overflow-x:auto;">
+	
+      <table>
+  <!--<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Points</th>
+  </tr>-->
+  <tr>
+    <td>C</td>
+    <td>Programming</td>
+    
+  </tr>
+  <tr>
+    <td>Algorithms</td>
+    <td>Web Development</td>
+    
+  </tr>
+  <tr>
+    <td>HTML</td>
+    <td>CSS</td>
+    
+  </tr>
+  <tr>
+    <td>Java Script</td>
+    <td>Boot Strap</td>
+    
+  </tr>
+  
+   <tr>
+    <td>blah blah</td>
+    <td>Blah blah</td>
+    
+  </tr>
+  
+</table></div>
+      
+      
+      
+     <!-- <p style="margin-left : 100px;">C</p></br>	
+       <p style="margin-left : 100px;">	Programming</p></br>
+       <p style="margin-left : 100px;">Algorithms</p></br>	
+   <p style="margin-left : 100px;">HTML and CSS	</p></br>
+  	<p style="margin-left : 100px;">BootStrap</p></br>
+   <p style="margin-left : 100px;">GNU Plot</p></br>		
+   <p style="margin-left : 100px;">JavaScript</p></br>-->
+      </p></div>
+	<!--<img src="14b.jpg">-->
+	</div>
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br>
+    <div class = "skills">
+    </br></br></br></br>
+    <img src="14c.jpg">
+    <div class="skill">
+    
+     <div style="overflow-x:auto;">
+ <table>
+  <!--<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Points</th>
+  </tr>-->
+  <tr>
+    <td>Adobe PhotoShop</td>
+    <td>Windows Movie Maker</td>
+    
+  </tr>
+  
+  <tr>
+    <td>Ubuntu</td>
+    <td>Linux</td>
+    
+  </tr>
+  <tr>
+    <td>Sketching</td>
+    <td>GNU Plot</td>
+    
+  </tr>
+  
+  <tr>
+    <td>Microsoft PowerPoint</td>
+    <td>Microsoft Excel</td>
+    
+  </tr>
+  
+  <tr>
+    <td>Microsoft Word</td>
+    <td>Microsoft Office</td>
+    
+  </tr>
+</table></div>
+    
+    
+   <!-- <p style="margin-left : 100px;"> Adobe Photoshop</p></br>
+    <p style="margin-left : 100px;">   Linux(Ubuntu)</p></br>	
+    <p style="margin-left : 100px;"> Microsoft PowerPoint</p></br>
+    <p style="margin-left : 100px;">	Microsoft Excel</p></br>
+   <p style="margin-left : 100px;">Microsoft Word</p></br>
+   <p style="margin-left : 100px;">Microsoft Office</p></br>-->
+</p>
+</div></div>
+</figure>
+   </div>
+   </div>
+   
+   </br></br></br></br></br></br></br></br></br></br></br></br>
+   
+   <div id = 'interests'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p >Interests</p>
+      </br></br></br></br></br></br>
+      <img src="15a.png">
+	<img src="15b.png">
+	<!--<img src="15c.jpg">-->
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br>
+    <div class = "skills">
+    <div class= "interests">
+    </br></br></br>
+ <p style="margin-left : 20px;">   Technology  </p></br></br>
+<p style="margin-left : 20px;">  Open-Source   </p></br></br>
+<p style="margin-left : 20px;">  Programming   </p></br></br>
+<p style="margin-left : 20px;">  Web Development   </p></br></br>
+<!--<p>  Android App Development </p></br></br>-->
+<p style="margin-left : 20px;">  Paradoxes in Decision Making</p></br></br>
+<p style="margin-left : 20px;"> Planning and Management</p></br></br>
+<p style="margin-left : 20px;"> Designing</p></br></br>
+</div></div>
+</figure>
+   </div>
+   </div>
+   
+   </br></br></br></br></br></br></br></br>
+   
+   <div id = 'activities'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p >Activities</p>
+      </br></br>
+      <div class = "skills">
+      <img src="16a.png">
+      <div class = "activities">
+       <p style="margin-left : 50px;">     Management </p></br></br>
+<p style="margin-left : 50px;">  Web Development    </p></br></br>
+<p style="margin-left : 50px;">Programming   </p></br></br>
+
+	<!--<img src="16b.jpg">-->
+	</div>	</div>
+      </figure>
+     <figure class="col-sm-6">
+    <p></p></br>
+    <div class = "skills"><div class = "activities">
+</br></br></br>
+<p> Travelling</p></br></br>
+<p>  Basketball </p></br></br>
+<p>  Badminton</p></br></br>
+<p> Lawn Tennis</p></br></br>
+<p> Singing and Dancing</p></br></br>
+<p>    Hospitality    </p></br></br>
+<p> Social Work</p></br></br>
+</div></div>
+</figure>
+   </div>
+   </div>
+   
+   </br></br></br></br>
+   
+   <div id = 'languages'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p >Languages</p>
+      <div class = "skills">
+      <img src="17a.jpg">
+       <p>   English : Fluent  </p></br></br>
+       </div>
+	 </figure>
+     <figure class="col-sm-6">
+    <p></p></br>
+    <div class = "skills">
+	<img src="17b.png">
+<p>  Hindi : Native or Bilingual  </p></br></br>
+</div>
+</figure>
+   </div>
+   </div>
+   
+   </br></br></br></br></br>
+   </br></br>
+   <div id = 'contact'>
+   <div class="row">
+    <figure class="col-sm-6">
+      <p >Contact</p>
+      </br></br></br></br>
+      <a href="https://www.facebook.com/sylvia.mittal.5"><img src="18e.png"></a>
+       <!--<a href="mittalsylvia23@gmail.com">-->
+       <div id="nytimes" class="portfolio-thumbnail" style="left: 100px; top: 80px;">
+
+	  <span class="textmail">
+		  mittalsylvia23@gmail.com
+	  </span> 
+	  <div id="father">
+
+	  <div class="bg-left"></div></div><div id="father1"><div class="bg-right"></div>
+
+	  </div><img src="18f.jpg" title="mittalsylvia23@gmail.com"></div>
+      
+     </figure>
+     <figure class="col-sm-6">
+    <p></p></br></br>
+    <div class = "skills">
+    </br></br></br></br>
+    <div id="nytimes" class="portfolio-thumbnail" style="left: 150px; top: 80px;">
+
+	<!--  <span class="text">
+		  Ping ME at : 7807105329
+	  </span><img src="18h.png" title="7807105329">--><div id="overlay" onclick="off()">
+  <div id="text" style = "text-align:center;">Ping me at  7807105329</div>
+</div>
+
+<div style = "margin-left:100px;">
+  <button onclick="on()"><img src="18h.png" title="7807105329"></button>
+</div></div></br>	
+    <img src="18c.jpg">
+    <a href="https://www.instagram.com/siya_sylvia/"><img src="18g.png"> </a></br></br>
+<!--	
+    <p>   Phone (WatsApp) : 7807105329  </p></br>
+<div class="email"><p> e-mail: <a href="b16038@students.iitmandi.ac.in" target="_blank">mittalsylvia23@gmail.com</a></p></div></br></br>-->
+</div>
+</figure>
+   </div>
+   </div>
+  
+</section>
+<footer class="container">
+  <div class="row">
+    <p class="col-sm-4"><!--&copy; --> Made With Love <i class="fa fa-heart" style="font-size:14px;color:red;"></i>  </p>
+    <ul class="col-sm-8">
+      <!--<li class="col-sm-1"> <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg" role="button"></li>-->
+      <li class="col-sm-1"><a href="https://www.facebook.com/sylvia.mittal.5"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg" role="button" ></a></li>
+      <li class="col-sm-1"> <a href="https://www.instagram.com/siya_sylvia/"> <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg" role="button"></a></li>
+       <li class="col-sm-1"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg" role="button"></li>-->
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
+
+	
