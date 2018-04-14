@@ -1,0 +1,373 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow-x:hidden;
+}
+header {
+ position:fixed;
+  z-index: 2;
+  border-bottom: solid 1px black;
+}
+
+header .row,footer .row {
+  display: flex;
+  align-items: center;
+   background:white;
+   width:113.6%;
+   padding:20px 0;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size:3vw;
+  margin: 0;
+  
+  
+}
+
+.row ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header a {
+  padding: 0 15px;
+ color : brown;
+  margin: 0;
+  text-decoration:none;
+}
+
+header a:hover {
+padding: 0 20px;
+ color : black;
+  margin: 0;
+  text-decoration:none;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('../img/a.jpg');
+ /*opacity : 0.8;*/
+  background-attachment : fixed;
+ background-size: cover;
+  color: brown;
+ height: 600px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+  }
+
+.jumbotron h1 {
+	color : brown;
+}
+
+#hey {
+	text-decoration : line-through;	
+}
+
+.jumbotron h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px #466995;
+}
+
+.jumbotron span {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px #466995;
+  
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: brown;
+  font-weight : bold;
+  /*text-shadow: 0 2px #466995;*/
+   border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  padding-top : 30px;
+  padding-bottom : 30px;
+  border-width : 2px;
+  border-color : white;
+}
+
+div.transbox {
+    margin: 1px;
+    background-color: #ffffff;
+   /* border: 1px solid black;*/
+    opacity: 0.7;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	
+}
+
+div.transbox h3 {
+    margin: 0.1%;
+    /*font-weight: bold;*/
+    color: #000000;
+    
+}
+
+.jumbotron h4 {
+	color : white;
+	font-weight : 800;
+}
+
+/*.img1 {
+	opacity : 0.7;
+}*/
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.btn.btn-primary {
+  border-radius: 2px;
+  border: 0px;
+  color: #fbd1d5;
+  text-shadow: none;
+  background-color: #ffffff;
+  background-image: -webkit-linear-gradient(#FFD194, #BC1324);
+}
+
+.btn.btn-primary:hover {
+  color: #ffffff;
+  background-color: #fbd1d5;
+}
+
+.btn-secondary {
+  background-color: #E8DFE0;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+
+.placeofbirth, .address, .phone, .email, .edu, .skills p {
+font-weight : bold;
+font-size : 15px;
+}
+
+#asc{
+font-weight  : bold;
+font-size : 15px;
+}
+
+.img21 {
+	clip : rect (0px,0px,0px,0px);
+}
+
+.education {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.education p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.education p:hover{background-color: #73AD21;
+		color : white;
+ }
+
+.achievements {
+	border-left: 6px solid #FFD700;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.achievements p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.achievements p:hover{background-color:#FFD700}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    font-size : 20px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+.interests {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.interests p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.interests p:hover{background-color: #FF69B4; }
+
+.activities {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.activities p {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.activities p:hover{background-color:#C0C0C0; }
+
+
+.text {
+	position: absolute;
+	top: 130px;
+	left : 50px;
+	 font-family: 'Roboto', sans-serif;
+	font-size:60px;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	/*font-style: bold;*/
+	color: black;
+	background-color:rgba(255,255,255,0.9);
+	width: 480px;
+	height:200px;
+	line-height:100px;
+	text-align: center;
+	z-index:10;
+	opacity: 0;
+	 -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+    
+.text:hover {
+	opacity:1;
+	}
+	
+.textmail {
+	position: absolute;
+	top: 415px;
+	left : 15px;
+	 font-family: 'Roboto', sans-serif;
+	font-size:45px;
+	font-style: bold;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	color: white;	width: 560px;
+	height:250px;
+	line-height:250px;
+	text-align: center;
+	z-index:10;
+	opacity: 0;
+	 -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease;
+    transition: all 0.8s ease-in-out;
+    }
+#father{
+	position:absolute;
+	top:410px;
+	left:15px;
+	overflow: hidden; 
+	height:260px;
+	width: 130px;
+}
+#father1{
+	position:absolute;
+	top:410px;
+	left:145px;
+	overflow: hidden; 
+	height:260px;
+	width: 430px;
+}
+.bg-left{
+	background-color:red;	
+	z-index:8;
+	opacity: 0.6;
+	margin-left:-300px;
+	transition: all 0.5s ease-out;
+	width: 100%;
+	height: 100%;
+}
+
+.bg-right{
+	background-color:black;	
+	z-index:8;
+	opacity: 0.6;
+	margin-left:500px;
+	transition: all 0.5s ease-out;
+	width: 100%;
+	height: 100%;
+}
+    
+.textmail:hover {
+	opacity:1;
+	}
+#nytimes:hover .bg-left{
+	margin-left:0%;
+	}
+
+#nytimes:hover .bg-right{
+	margin-left:0%;
+	}
+	
+#overlay {
+    position: fixed;
+    display: none;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 80px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+footer {
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
